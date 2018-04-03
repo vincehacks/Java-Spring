@@ -452,7 +452,7 @@ times, they are all referring to the same reference.
 - Inherits from `spring-boot-dependencies` 
 	- Gives us the default dependencies
 	- Defaults can be changed in `src/main/resources/application.properties`
-	- [Full list of property](https://docs.spring.io/spring- boot/docs/current/reference/html/common-application-properties.html)
+	- [Full list of property](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
 
 
 #### Auto-Configuration
@@ -486,7 +486,7 @@ times, they are all referring to the same reference.
 	- Can use HAL browser
 		- groupId: org.springframework.data
 		- artifactId: spring-data-rest-hal-browser
-		- [Results are found at](http://localhost:8080/actuator/#http://localhost:8080/autocoã DevelopIntelligence http://wnwwf.DiegvelopIntelligence.com)
+		- Results are found at: http://localhost:8080/actuator/#http://localhost:8080/autocoã DevelopIntelligence http://wnwwf.DiegvelopIntelligence.com)
 
 
 #### @SpringBootApplication
@@ -505,10 +505,10 @@ times, they are all referring to the same reference.
 	- `SpringApplication.run()`
 		- This method call 'starts' Spring Boot
 		- You would then call your own methods if you need to
-- `@SpringBootApplication
+- ```@SpringBootApplication
   public class LibraryApplication {
   public static void main(String[]args) { SpringApplication.run(LibraryApplication.class,args); MainApplication.oldMainMethod();
- }`
+ }```
 
 
 ### Spring WebMVC
