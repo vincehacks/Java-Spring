@@ -1,7 +1,7 @@
 /******************************************************************************
-	Created by Vince Chang
-  
-  This is the configuration file that will annotate a bean.
+Created by Vince Chang
+
+This is the configuration file that will annotate a bean.
 ******************************************************************************/
 package com.di.helloworld;
 

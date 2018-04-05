@@ -1,7 +1,7 @@
 /******************************************************************************
-	Created by Vince Chang
-  
-  This is the Beans implementation, that will ALWAYS implement an interface!
+Created by Vince Chang
+
+This is the Beans implementation, that will ALWAYS implement an interface!
 ******************************************************************************/
 
 package com.di.helloworld;

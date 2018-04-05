@@ -1,8 +1,8 @@
 /******************************************************************************
-	Created by Vince Chang
-	This interface is like a contract
- 	As a developer, we don't need to see some parts, aka a DB might be talking
-  to this file, but we don't need to see that code!
+Created by Vince Chang
+This interface is like a contract
+As a developer, we don't need to see some parts, aka a DB might be talking to
+this file, but we don't need to see that code!
 ******************************************************************************/
 
 package com.di.helloworld;

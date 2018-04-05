@@ -1,7 +1,8 @@
 /******************************************************************************
-	Created by Vince Chang
-  This interface will have method declarations that will have to be
-  implemented in any class that implements this interface!
+Created by Vince Chang
+
+This interface will have method declarations that will have to be
+implemented in any class that implements this interface!
 ******************************************************************************/
 
 package com.di.phonebook.service;

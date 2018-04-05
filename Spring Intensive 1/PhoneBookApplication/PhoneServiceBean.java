@@ -1,7 +1,8 @@
 /******************************************************************************
-	Created by Vince Chang
-  This implementation of Bean will implement the PhoneService interface
-  I am implementing each method by calling the ContactRepository methods
+Created by Vince Chang
+
+This implementation of Bean will implement the PhoneService interface
+I am implementing each method by calling the ContactRepository methods
 ******************************************************************************/
 
 package com.di.phonebook.service;
