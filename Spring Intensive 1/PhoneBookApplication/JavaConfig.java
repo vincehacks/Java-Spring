@@ -1,6 +1,6 @@
 /******************************************************************************
-	Created by Vince Chang
-	This is the configuration file that will have information about beans
+Created by Vince Chang
+This is the configuration file that will have information about beans
 ******************************************************************************/
 
 package com.di.phonebook.config;
