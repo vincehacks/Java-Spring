@@ -3,13 +3,13 @@
 Created by Vince Chang </br>
 
 Instructor: Marnie Knue </br>
-Hours: 930am - 430pm 4/2-4/4 </br>
-Breaks: ~1030am & 230pm </br>
+Email: marnie.knue@gmail.com
+
+Hours: 9:30 am - 4:30 pm 4/2-4/4 </br>
+Breaks: ~10:30 am & 2:30 pm </br>
+
 
 # Day 1
-#### Questions
- 	1.
-	2. 
 
 
 #### Introduction to Spring
@@ -139,7 +139,7 @@ Context), the container will be responsible for injecting information it needs
 - Object defines its dependencies and container handles injecting those
 dependencies when object is created
 - Manages:
-	- Bean lifecycles
+	- Bean life cycles
 	- Object pooling
 	- Bean dependencies via injection
 
@@ -177,9 +177,9 @@ dependencies when object is created
 #### Main Class
 - Main Class will change
 	- Create ApplicationContext = is the **container**
-	- .getBean -> This will be the starting point!
+	- `.getBean` -> This will be the starting point!
 		- This method is overloaded
-		- Will look for "library in the LibraryServiceImpl.class"
+		- Will look for "library in the `LibraryServiceImpl.class`"
 
 
 #### application-config.xml
@@ -245,17 +245,16 @@ times, they are all referring to the same reference.
 
 
 #### Configuration Annotations
-- @Component
+- `@Component`
 	- Defines this as a Spring Bean
 	- Name of bean is name of class with a lower-case first letter
-- @Autowired
+- `@Autowired`
 	- Defines how to wire the beans
 	- Is a required dependency
 	- On constructor, defines that the arguments passed in 
 	- Allows beans to do dependency injection (where you let the Spring
 	container handle everything to import to you and let the container
 	instantiate it for you)
-	- 
 
 
 #### Prefixes
@@ -431,7 +430,7 @@ times, they are all referring to the same reference.
 	- Starter parent
 	- Auto-configuration
 - Could build 'by hand'
-- Use Spring's Initializr Found at start.spring.io
+- Use Spring's Initializer Found at start.spring.io
 
 
 #### Spring Boot Starter Projects
@@ -516,14 +515,14 @@ times, they are all referring to the same reference.
 
 #### MVC - Model View Controller
 - An architectural design pattern
-- Means of separating the presenation (view) from the business logic (model)
+- Means of separating the presentation (view) from the business logic (model)
 with an itermediary (controller)
 - Used in most UI situations
 - **Model** (Logic)
 	- Data that is being modified and used
-	- Often service that does the modifiying is included
+	- Often service that does the modifying is included
 - **View**
-	- The code that dynmically define what goes to the user
+	- The code that dynamically define what goes to the user
 - **Controller**
 	- Maps to view and model
 - From an architectural standpoint, these are likely components of classes
@@ -550,7 +549,8 @@ with an itermediary (controller)
 
 #### Configuration with web.xml
 ```
-<context-param> <param-name>contextConfigLocation</param-name> <param-value>/WEB-INF/application-config.xml</param-value>
+<context-param> 
+<param-name>contextConfigLocation</param-name> <param-value>/WEB-INF/application-config.xml</param-value>
 </context-param>
 <servlet>
 <servlet-name>Spring</servlet-name> <servlet-class>

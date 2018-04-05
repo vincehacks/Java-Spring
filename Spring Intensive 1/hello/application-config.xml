@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- This is creating a Bean, it goes to the package and the HelloSpringBean
+	class. The id is the reference to my bean that is class="package.class"
+	format. We create this file because, we would make one modification here to
+	make the whole application work if I was to rename classes etc. 
+	     
+	This is the old way of doing things, new way is to use JavaConfig-->
+	<bean id="bean" class="com.di.helloworld.HelloSpringBean"></bean>
+</beans>
