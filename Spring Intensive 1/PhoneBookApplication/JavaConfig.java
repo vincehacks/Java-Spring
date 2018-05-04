@@ -1,5 +1,6 @@
 /******************************************************************************
 Created by Vince Chang
+
 This is the configuration file that will have information about beans
 ******************************************************************************/
 
@@ -17,17 +18,17 @@ import com.di.phonebook.service.PhoneServiceBean;
 @ComponentScan // By having @ComponentScan, will look for all @Components
 public class JavaConfig {
 
-	// Return Type is always the interface and you return a
-	// call to the implementation that returns you back of the type interface!
-	
-	// Created a new contactRepo bean that will reference the contact table
-	@Bean("contactTable")
-	public ContactRepository contactRepository() {
-		return new ContactTable();
-	}
-	
-	@Bean("bean")
-	public PhoneService phoneService() {
-		return new PhoneServiceBean(contactRepository());
-	}
+  // Return Type is always the interface and you return a
+  // call to the implementation that returns you back of the type interface!
+
+  // Created a new contactRepo bean that will reference the contact table
+  @Bean("contactTable")
+  public ContactRepository contactRepository() {
+    return new ContactTable();
+  }
+
+  @Bean("bean")
+  public PhoneService phoneService() {
+    return new PhoneServiceBean(contactRepository());
+  }
 }

@@ -8,13 +8,13 @@ package com.di.helloworld;
 
 public class HelloSpringBean implements HelloSpring {
 
-	String message;
-	
-	public void setMessage(String m){
-		this.message = m;
-	}
-	
-	public String getMessage() {
-		return this.message;
-	}
+  String message;
+
+  public void setMessage(String m){
+    this.message = m;
+  }
+
+  public String getMessage() {
+    return this.message;
+  }
 }

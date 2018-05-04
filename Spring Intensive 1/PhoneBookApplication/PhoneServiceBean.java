@@ -13,35 +13,35 @@ import com.di.phonebook.repository.ContactRepository;
 import javax.annotation.PostConstruct;
 
 public class PhoneServiceBean implements PhoneService {
-	
-	ContactRepository contactRepo;
-	
-	@PostConstruct
-	public void xxx() {
-		System.out.println("Hello World");
-	}
-	
-	public PhoneServiceBean(ContactRepository cr){
-		this.contactRepo = cr;
-	}
-	
-	public Map<String, Contact> getAllContacts(){
-		return contactRepo.getAllContacts();
-	}
-	
-	public Contact findContact(String id) {
-		return contactRepo.findContact(id);
-	}
-	
-	public void deleteContact(String id) {
-		contactRepo.deleteContact(id);
-	}
-	
-	public Contact addContact(String id, String name, String phone) {
-		return contactRepo.addContact(id, name, phone);
-	}
-	
-	public Contact updateContact(Contact c) {
-		return contactRepo.updateContact(c);
-	}
+
+  ContactRepository contactRepo;
+
+  @PostConstruct
+  public void xxx() {
+    System.out.println("Hello World");
+  }
+
+  public PhoneServiceBean(ContactRepository cr){
+    this.contactRepo = cr;
+  }
+
+  public Map<String, Contact> getAllContacts(){
+    return contactRepo.getAllContacts();
+  }
+
+  public Contact findContact(String id) {
+    return contactRepo.findContact(id);
+  }
+
+  public void deleteContact(String id) {
+    contactRepo.deleteContact(id);
+  }
+
+  public Contact addContact(String id, String name, String phone) {
+    return contactRepo.addContact(id, name, phone);
+  }
+
+  public Contact updateContact(Contact c) {
+    return contactRepo.updateContact(c);
+  }
 }

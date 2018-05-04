@@ -28,15 +28,15 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MainApplication {
 
-	public static void main(String[] args) {
-		
-		// Passing in the JavaConfig.class file which is the entry point
-		// ApplicationContext is the spring container!
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(JavaConfig.class);
-		
-		// .getBean will look in the Spring Container which is appContext.
-		// appContext has a copy of JavaConfig.class for my ("bean", of type HellowSpringBean.class)
-		HelloSpring bean = appContext.getBean("bean",HelloSpringBean.class);
-		System.out.println(bean.getMessage());
-	}
+  public static void main(String[] args) {
+
+    // Passing in the JavaConfig.class file which is the entry point
+    // ApplicationContext is the spring container!
+    ApplicationContext appContext = new AnnotationConfigApplicationContext(JavaConfig.class);
+
+    // .getBean will look in the Spring Container which is appContext.
+    // appContext has a copy of JavaConfig.class for my ("bean", of type HellowSpringBean.class)
+    HelloSpring bean = appContext.getBean("bean",HelloSpringBean.class);
+    System.out.println(bean.getMessage());
+  }
 }

@@ -16,13 +16,13 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @Configuration
 @PropertySource(value = {"message.properties"}) // Setting the path to my message
 public class JavaConfig {
-	
-	/* The return type is the interface !
-	 * To give my bean an id, need to pass in like ("bean")
-	 * This just returns the interface
-	 */
-	@Bean("bean")
-	public HelloSpring HelloSpring() {
-		return new HelloSpringBean();
-	}
+
+  /* The return type is the interface !
+   * To give my bean an id, need to pass in like ("bean")
+   * This just returns the interface
+   */
+  @Bean("bean")
+  public HelloSpring HelloSpring() {
+    return new HelloSpringBean();
+  }
 }

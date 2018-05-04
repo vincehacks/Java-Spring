@@ -37,16 +37,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApplication {
 
-	public static void main(String[] args) {
-		
-		// Passing in the application-config.xml file which is the entry point
-		ApplicationContext appContext = new ClassPathXmlApplicationContext("application-config.xml");
-		
-		// .getBean will look in the Spring Container which is appContext.
-		//  appContext has a copy of application-config.xml for my ("bean", of
-		// type HellowSpringBean.class)
-		HelloSpringBean bean = appContext.getBean("bean",HelloSpringBean.class);
-		bean.setMessage("This is the message!!!");
-		System.out.println(bean.getMessage());
-	}
+  public static void main(String[] args) {
+
+    // Passing in the application-config.xml file which is the entry point
+    ApplicationContext appContext = new ClassPathXmlApplicationContext("application-config.xml");
+
+    // .getBean will look in the Spring Container which is appContext.
+    //  appContext has a copy of application-config.xml for my ("bean", of
+    // type HellowSpringBean.class)
+    HelloSpringBean bean = appContext.getBean("bean",HelloSpringBean.class);
+    bean.setMessage("This is the message!!!");
+    System.out.println(bean.getMessage());
+  }
 }

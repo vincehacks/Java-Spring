@@ -32,22 +32,22 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.di.phonebook.config.JavaConfig;
 
 public class MainApplication {
-	
-	public static void main(String[] args) {
-		// Passing in the JavaConfig.class file which is the entry point
-		// ApplicationContext is the container!
-		ApplicationContext appContext = 
-		new AnnotationConfigApplicationContext(JavaConfig.class);
-	
-		/* .getBean will look in the Spring Container which is appContext.
-		 * appContext has a copy of JavaConfig.class for my
-		 * ("bean", of type PhoneServiceBean.class)
-		 * Return the type of interface, because multiple beans can implement the
-		 * same interface!
-		 */
-		PhoneService bean = appContext.getBean("bean",PhoneServiceBean.class);
-	
-		// Prints out the information from the phone book!
-		System.out.println(bean.getAllContacts());
-	}
+
+  public static void main(String[] args) {
+    // Passing in the JavaConfig.class file which is the entry point
+    // ApplicationContext is the container!
+    ApplicationContext appContext =
+    new AnnotationConfigApplicationContext(JavaConfig.class);
+
+    /* .getBean will look in the Spring Container which is appContext.
+     * appContext has a copy of JavaConfig.class for my
+     * ("bean", of type PhoneServiceBean.class)
+     * Return the type of interface, because multiple beans can implement the
+     * same interface!
+     */
+    PhoneService bean = appContext.getBean("bean",PhoneServiceBean.class);
+
+    // Prints out the information from the phone book!
+    System.out.println(bean.getAllContacts());
+  }
 }

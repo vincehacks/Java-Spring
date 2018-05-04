@@ -1,4 +1,4 @@
-/****************************************************************************** 
+/******************************************************************************
 Created by Vince Chang
 
 Lab 5 – WebMVC PhoneBook
@@ -9,17 +9,17 @@ called RESTfulPhoneBook. This is the same PhoneBookApplication that we have
 been working on, it just has been reconfigured for a web application.
 
 1. Update the pom.xml file to add the following dependencies:
-	  a. groupId: org.springframework
-	  artifactId: spring-webmvc
-	  version: 4.3.10.RELEASE
+    a. groupId: org.springframework
+    artifactId: spring-webmvc
+    version: 4.3.10.RELEASE
 
-	  b. groupId: org.springframework
-	  artifactId: spring-web
-	  version: 4.3.10.RELEASE
+    b. groupId: org.springframework
+    artifactId: spring-web
+    version: 4.3.10.RELEASE
 
-	  c. groupId: javax.servlet
-	  artifactId: jstl
-	  version: 1.2
+    c. groupId: javax.servlet
+    artifactId: jstl
+    version: 1.2
 
 2. Define a new class called MVCConfig that contains the necessary MVC
 configuration information
@@ -51,23 +51,23 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 public class MVCConfig extends WebMvcConfigurerAdapter {
 
-	public void addResourceHandlers(ResourceHandlerRegistry registry){
-		registry.addResourceHandler("/resources/**").
-		addResourceLocations("/resources/"); 
-	}
-	
-	public void configureDefaultServletHandling (DefaultServletHandlerConfigurer configurer) {
-		configurer.enable();
-	}
-	
-	public InternalResourceViewResolver viewResolver() { 
-		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/");
-		resolver.setSuffix(".jsp");
-		resolver.setAlwaysInclude(true);
-		return resolver;
-	}
-	public void configureViewResolvers(ViewResolverRegistry registry){
-		registry.viewResolver(viewResolver());
-	}
+  public void addResourceHandlers(ResourceHandlerRegistry registry){
+    registry.addResourceHandler("/resources/**").
+    addResourceLocations("/resources/");
+  }
+
+  public void configureDefaultServletHandling (DefaultServletHandlerConfigurer configurer) {
+    configurer.enable();
+  }
+
+  public InternalResourceViewResolver viewResolver() {
+    InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+    resolver.setPrefix("/WEB-INF/");
+    resolver.setSuffix(".jsp");
+    resolver.setAlwaysInclude(true);
+    return resolver;
+  }
+  public void configureViewResolvers(ViewResolverRegistry registry){
+    registry.viewResolver(viewResolver());
+  }
 }
