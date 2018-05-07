@@ -1,9 +1,10 @@
 # Java-Spring
-
 Created by Vince Chang </br>
 
 Instructor: Marnie Knue </br>
 Email: marnie.knue@gmail.com
+
+Used Java-Spring to experiment with RESTFUL calls on a phonebook application.
 
 
 # Day 1
