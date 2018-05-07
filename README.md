@@ -5,9 +5,6 @@ Created by Vince Chang </br>
 Instructor: Marnie Knue </br>
 Email: marnie.knue@gmail.com
 
-Hours: 9:30 am - 4:30 pm 4/2-4/4 </br>
-Breaks: ~10:30 am & 2:30 pm </br>
-
 
 # Day 1
 
