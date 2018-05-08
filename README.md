@@ -1,8 +1,6 @@
 # Java-Spring
 Created by Vince Chang </br>
 
-Instructor: Marnie Knue </br>
-Email: marnie.knue@gmail.com
 
 Used Java-Spring to experiment with RESTFUL calls on a phonebook application.
 
@@ -129,7 +127,7 @@ environments
 - MVC is 2 patterns connected to each other
 - Spring will give you everything you need through Dependency Injection
 - The instantiation of the object is done by the Spring Container (Application
-Context), the container will be responsible for injecting information it needs 
+Context), the container will be responsible for injecting information it needs
 
 
 #### Inversion of Control (IoC)
@@ -249,7 +247,7 @@ times, they are all referring to the same reference.
 - `@Autowired`
 	- Defines how to wire the beans
 	- Is a required dependency
-	- On constructor, defines that the arguments passed in 
+	- On constructor, defines that the arguments passed in
 	- Allows beans to do dependency injection (where you let the Spring
 	container handle everything to import to you and let the container
 	instantiate it for you)
@@ -446,7 +444,7 @@ times, they are all referring to the same reference.
 	- Allows for dependency versioning
 	- Default plugin configuration
 	- Configuration
-- Inherits from `spring-boot-dependencies` 
+- Inherits from `spring-boot-dependencies`
 	- Gives us the default dependencies
 	- Defaults can be changed in `src/main/resources/application.properties`
 	- [Full list of property](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
@@ -547,7 +545,7 @@ with an itermediary (controller)
 
 #### Configuration with web.xml
 ```
-<context-param> 
+<context-param>
 <param-name>contextConfigLocation</param-name> <param-value>/WEB-INF/application-config.xml</param-value>
 </context-param>
 <servlet>
