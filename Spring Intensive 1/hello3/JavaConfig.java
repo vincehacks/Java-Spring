@@ -5,7 +5,6 @@ Now using @PropertySource and passing in the value from message.properties
 ******************************************************************************/
 
 package com.di.helloworld;
-
 import java.io.IOException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

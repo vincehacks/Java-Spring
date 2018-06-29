@@ -26,7 +26,6 @@ packagecalled com.di.phonebook.config.
 ******************************************************************************/
 
 package com.di.phonebook.service;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.di.phonebook.config.JavaConfig;

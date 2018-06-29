@@ -5,7 +5,6 @@ This is the configuration file that will have information about beans
 ******************************************************************************/
 
 package com.di.phonebook.config;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -6,7 +6,6 @@ implemented in any class that implements this interface!
 ******************************************************************************/
 
 package com.di.phonebook.service;
-
 import java.util.Map;
 import com.di.phonebook.domain.Contact;
 

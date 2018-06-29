@@ -1,5 +1,4 @@
 package com.di.phonebook.service;
-
 import org.springframework.ui.Model;
 import com.di.phonebook.domain.Contact;
 

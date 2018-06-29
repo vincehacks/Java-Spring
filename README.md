@@ -514,8 +514,10 @@ them?
   - You would then call your own methods if you need to
 - ```@SpringBootApplication
   public class LibraryApplication {
-  public static void main(String[]args) { SpringApplication.run(LibraryApplication.class,args); MainApplication.oldMainMethod();
- }```
+  public static void main(String[]args) {
+    SpringApplication.run(LibraryApplication.class,args);
+    MainApplication.oldMainMethod();
+  }```
 
 
 ### Spring WebMVC

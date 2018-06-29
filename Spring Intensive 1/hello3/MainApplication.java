@@ -22,7 +22,6 @@ set as part of the startup of the application.
 ******************************************************************************/
 
 package com.di.helloworld;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
