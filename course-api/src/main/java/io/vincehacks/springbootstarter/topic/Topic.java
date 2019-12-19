@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 package io.vincehacks.springbootstarter.topic;
 
 public class Topic {
