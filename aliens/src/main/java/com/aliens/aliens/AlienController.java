@@ -4,13 +4,12 @@ package com.aliens.aliens;
 
 import java.util.List;
 
-import org.springframework.http.MediaType;
-// import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-// import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -37,17 +36,26 @@ public class AlienController {
 		return a1;
 	}
 
-	// Updates an alien in the DB
-	@PutMapping
-	public void updateAlien(Alien a1){
-		repo.updateAlien(a1);
+	// Updates an alien in the DB, creates a new alien of id does not exist!
+	@PutMapping("alien")
+	public Alien updateAlien(@RequestBody Alien a1){
+		if(repo.getAlien(a1.getId()).getId() == 0)
+			repo.createAlien(a1);
+		else
+			repo.updateAlien(a1);
+
+		return a1;
 	}
 
-	// Deletes an alien from the DB
-	@DeleteMapping
+	// Deletes an alien from the DB, if it's in the DB
+	@DeleteMapping("alien/{id}")
 	public Alien deleteAlien(@PathVariable("id") int id){
+
 		Alien a = repo.getAlien(id);
-		repo.deleteAlien(id);
+
+		if(a.getId() != 0)
+			repo.deleteAlien(id);
+
 		return a;
 	}
 }

@@ -107,7 +107,9 @@ public class AlienDAO {
 
 	/* =========================================================================
 	* Function Name: createAlien
-	* Task: Adds a alien to the list
+	* Task: Adds a alien to the DB using a PreparedStatement object
+	* Using a PreparedStatement because it will replace the question marks by
+	* using teh Alien object I passed in to fill those values
 	========================================================================= */
 	public void createAlien(Alien a){
 
@@ -135,24 +137,19 @@ public class AlienDAO {
 
 	/* =========================================================================
 	* Function Name: updateAlien
-	* Task: Updates an Alien's information
+	* Task: Updates an Alien's information in the DB
 	========================================================================= */
 	public void updateAlien(Alien a){
-		// for(Alien alien : listOfAliens){
-		// 	if(alien.getId() == a.getId()){
-		// 		alien.setName(a.getName());
-		// 		alien.setPoints(a.getPoints());
-		// 	}
-		// }
-		String sql = "UPDATE alien SET (?,?,?) WHERE ";
+
+		String sql = "UPDATE alien SET name=?, points=? WHERE id=?";
 
 		try{
 			// The PreparedStatement takes the sql query right away vs a Statement obj
 			PreparedStatement st = con.prepareStatement(sql);
 			// Replacing the ? now in the sql string
-			st.setInt(1, a.getId());
-			st.setString(2,a.getName());
-			st.setInt(3,a.getPoints());
+			st.setString(1,a.getName());
+			st.setInt(2,a.getPoints());
+			st.setInt(3,a.getId());
 			st.executeUpdate();
 		}
 		catch(Exception e){
@@ -162,21 +159,18 @@ public class AlienDAO {
 
 	/* =========================================================================
 	* Function Name: deleteAlien
-	* Task: Deletes the alien from the list
+	* Task: Deletes the alien from the DB
 	========================================================================= */
 	public void deleteAlien(int id){
 
-		String sql = "DELETE FROM alien WHERE id=" + id;
+		String sql = "DELETE FROM alien WHERE id=?";
 
 		try{
-			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery(sql);
-			if(rs.next()){
-				Alien a = new Alien();
-				a.setId(rs.getInt(1));
-				a.setName(rs.getString(2));
-				a.setPoints(rs.getInt(3));
-			}
+			// The PreparedStatement takes the sql query right away vs a Statement obj
+			PreparedStatement st = con.prepareStatement(sql);
+			// Replacing the ? now in the sql string
+			st.setInt(1,id);
+			st.executeUpdate();
 		}
 		catch(Exception e){
 			System.out.println(e);
