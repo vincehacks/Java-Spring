@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-	
-	// By default this handles GET requests
-	@RequestMapping("/hello")
-	public String sayHi() {
-		return "Hi";
-	}
+
+  // By default this handles GET requests
+  @RequestMapping("/hello")
+  public String sayHi() {
+    return "Hi";
+  }
 
 }

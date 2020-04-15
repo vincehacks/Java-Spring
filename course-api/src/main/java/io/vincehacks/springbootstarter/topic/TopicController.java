@@ -16,36 +16,36 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TopicController {
 
-	@Autowired
-	private TopicService topicService;
+  @Autowired
+  private TopicService topicService;
 
-	// Get request to get all topics
-	@RequestMapping("/topics")
-	public List<Topic> getAllTopics() {
-		return topicService.getAllTopics();
-	}
+  // Get request to get all topics
+  @RequestMapping("/topics")
+  public List<Topic> getAllTopics() {
+    return topicService.getAllTopics();
+  }
 
-	// Get request to see a specific topic
-	@RequestMapping("/topics/{id}")
-	public Topic getTopic(@PathVariable String id) {
-		return topicService.getTopic(id);
-	}
+  // Get request to see a specific topic
+  @RequestMapping("/topics/{id}")
+  public Topic getTopic(@PathVariable String id) {
+    return topicService.getTopic(id);
+  }
 
-	// Post request to add a topic
-	@RequestMapping(method = RequestMethod.POST, value = "/topics")
-	public void addTopic(@RequestBody Topic topic) {
-		topicService.addTopic(topic);
-	}
+  // Post request to add a topic
+  @RequestMapping(method = RequestMethod.POST, value = "/topics")
+  public void addTopic(@RequestBody Topic topic) {
+    topicService.addTopic(topic);
+  }
 
-	// Put request to update a topic
-	@RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
-	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
-		topicService.updateTopic(topic, id);
-	}
-	
-	// Delete request to delete a topic
-	@RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
-	public void deleteTopic(@PathVariable String id) {
-		topicService.deleteTopic(id);
-	}
+  // Put request to update a topic
+  @RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
+  public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
+    topicService.updateTopic(topic, id);
+  }
+
+  // Delete request to delete a topic
+  @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
+  public void deleteTopic(@PathVariable String id) {
+    topicService.deleteTopic(id);
+  }
 }
