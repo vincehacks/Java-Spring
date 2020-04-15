@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication<aliens>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.aliens.aliens.DemoApplication",
+      "projectName": "aliens",
+      "args": ""
+    }
+  ]
+}
