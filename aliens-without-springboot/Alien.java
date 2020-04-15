@@ -3,34 +3,34 @@
 @XmlRootElement // Returning this object in XML format so need to declare here
 public class Alien {
 
-	private int id;
-	private String name;
-	private int points;
+  private int id;
+  private String name;
+  private int points;
 
 
-	public void setId(int id){
-		this.id = id;
-	}
+  public void setId(int id){
+    this.id = id;
+  }
 
-	public int getId(){
-		return id;
-	}
+  public int getId(){
+    return id;
+  }
 
-	public void setName(String name){
-		this.name = name;
-	}
+  public void setName(String name){
+    this.name = name;
+  }
 
-	public String getName(){
-		return name;
-	}
+  public String getName(){
+    return name;
+  }
 
-	public void setPoints(int points){
-		this.points = points;
-	}
+  public void setPoints(int points){
+    this.points = points;
+  }
 
-	public int getPoints(){
-		return points;
-	}
+  public int getPoints(){
+    return points;
+  }
 
 
 }
