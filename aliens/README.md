@@ -2,7 +2,9 @@
 
 Created by Vince Chang </br>
 
-Spring Boot application built to deal with Aliens
+Spring Boot application built to deal with Aliens. This project creates a REST
+API to create, read, update and delete Aliens from MySQL database using the
+jdbc API.
 
 #### Java on my Mac
 
