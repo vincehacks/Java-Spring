@@ -14,6 +14,16 @@ public class AlienDAO {
   /* =========================================================================
   * Function Name: constructor
   * Task: Uses JDBC is the API to connect to MySQL database
+  * DriverManger.getConnection() is a static method that will return an instance
+  * of a Connection object, provided the url, username, and password to the DB
+  *
+  * Class.forName() will automatically Load the class and call its static method
+  * The static method that is called will do this snippet of code which is to
+  * Register the driver
+  * DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver)
+  * because I am forcing this static method to be called by doing
+  * Class.forName("com.mysql.cj.jdbc.Driver"), I do not need to Register it
+  * myself therefore, do not need to include that part!
     ========================================================================= */
   public AlienDAO(){
 
@@ -48,6 +58,9 @@ public class AlienDAO {
   *   3. Step 2 will return a Result set, so will need to use a while loop to
   *   iterate over everything in the set. In this case, for each row, will
   *   create a new Alien object and add this to the list
+  *
+  * Important to know that rs.next() will tell move the pointer down to the
+  * next element. This is needed for testing and singling out things from DB
     ========================================================================= */
   public List<Alien> getAliens(){
 
@@ -59,6 +72,8 @@ public class AlienDAO {
       ResultSet rs = st.executeQuery(sql);
       while(rs.next()){
         Alien a = new Alien();
+        // These get methods take a column number to get the value
+        // 1 = column 1, etc..
         a.setId(rs.getInt(1));
         a.setName(rs.getString(2));
         a.setPoints(rs.getInt(3));
@@ -83,6 +98,7 @@ public class AlienDAO {
   * 	step 1
   *   3. Step 2 will return a Result set, DO NOT NEED A WHILE LOOP because will
   *   only need to get one value back from the DB
+  * Note that the execute statement is executeQuery()
     ========================================================================= */
   public Alien getAlien(int id){
 
@@ -138,6 +154,7 @@ public class AlienDAO {
   /* =========================================================================
   * Function Name: updateAlien
   * Task: Updates an Alien's information in the DB
+  * Take note that the Execute function is now executeUpdate()
   ========================================================================= */
   public void updateAlien(Alien a){
 
