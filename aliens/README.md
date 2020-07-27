@@ -1,4 +1,4 @@
-# Alien REST API
+# ALIEN REST API
 
 Created by Vince Chang </br>
 
@@ -96,17 +96,17 @@ jdbc API.
 6. Process Results (Acknowledge what you said)
 7. Close (Conversation over)
 
-#### Java on my Mac
+#### JAVA ON MY MAC
 
 - `/Library/Java/JavaVirtualMachines/<version>/Contents/Home/`
 
-#### How to Test MySQL from terminal
+#### HOW TO TEST MySQL FROM TERMINAL
 
 - MySQL location: `/usr/local/mysql`
 - From here can run the commands just outside the `bin` folder
 - [MySQL from Terminal](https://dev.mysql.com/doc/refman/8.0/en/testing-server.html)
 
-#### Troubles Encountered
+#### TROUBLES ENCOUNTERED
 
 1. Versions of MySQL connector was not compatible with MySQL 8
 
