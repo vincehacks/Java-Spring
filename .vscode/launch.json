@@ -2,12 +2,28 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - DemoApplication",
+      "request": "launch",
+      "mainClass": "bobame.bobame.DemoApplication"
+    },
+    {
+      "type": "java",
       "name": "Spring Boot-DemoApplication<aliens>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "console": "internalConsole",
       "mainClass": "com.aliens.aliens.DemoApplication",
       "projectName": "aliens",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication<bobame>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "bobame.bobame.DemoApplication",
+      "projectName": "bobame",
       "args": ""
     }
   ]

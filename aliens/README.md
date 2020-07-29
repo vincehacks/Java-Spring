@@ -4,9 +4,9 @@ Created by Vince Chang </br>
 
 Spring Boot application built to deal with Aliens. This project creates a REST
 API to create, read, update and delete Aliens from MySQL database using the
-jdbc API.
+JDBC API.
 
-#### JDBC = Java Database Connectivity
+#### JDBC = JAVA DATABASE CONNECTIVITY
 
 - This is how java applications can connect to a database using 7 steps
 - The best analogy is when you want to call your friend on the phone, you will
@@ -23,22 +23,22 @@ jdbc API.
      of this project, I am using **8.0.19** for both mysql-connector & MySQL DB
 
 ```xml
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>8.0.19</version>
-		</dependency>
+  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+  <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.19</version>
+  </dependency>
 ```
 
-- The second part to this to to **Register**
-- Class.forName() will automatically Load the class and call its static method
+- The second part to this is to **Register**
+- `Class.forName()` will automatically Load the class and call its static method
 - The static method that is called will do this snippet of code which is to
   Register the driver `DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver)`
   because I am forcing this static method to be called by doing
   `Class.forName("com.mysql.cj.jdbc.Driver")`, I do not need to Register it
   myself therefore, do not need to include that part!
-- This constructor is needed for getConnection to work
+- This constructor is needed for `getConnection` to work
 
 ```java
   /* =========================================================================
@@ -124,3 +124,21 @@ String url = "jdbc:mysql://localhost:3306/restdb?useUnicode=true&characterEncodi
 ```
 
 3. Syntax on how to use Spring Boot Annotations for REST APIs
+
+#### HOW TO RUN THE PROJECT
+
+1. From the root directory, you can build and install all dependencies by
+   running this Maven command from the terminal:
+
+`mvn clean package`
+
+This will generate a `redfin-1.0-SNAPSHOT-jar-with-dependencies.jar`
+file under `redfin/target`
+
+2. Run the program by using the jar with this command
+
+NOTE: Need to be running this from the root (redfin), NOT inside /target
+
+`java -jar target/redfin-1.0-SNAPSHOT-jar-with-dependencies.jar`
+
+The output will be displayed to the terminal

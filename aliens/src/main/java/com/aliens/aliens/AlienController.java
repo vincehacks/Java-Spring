@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+// Note: Jackson is brought in as a Maven dependency and this does the
+// conversion of list of objects into JSON
 @RestController
 public class AlienController {
 
@@ -53,7 +55,7 @@ public class AlienController {
 
     Alien a = repo.getAlien(id);
 
-    if(a.getId() != 0)
+    if(a.getId() > -1)
       repo.deleteAlien(id);
 
     return a;
