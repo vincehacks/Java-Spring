@@ -72,14 +72,14 @@ public class BobaLocationDAO {
       Statement st = con.createStatement();
       ResultSet rs = st.executeQuery(sql);
       while(rs.next()){
-        BobaLocation a = new BobaLocation();
+        BobaLocation bobaShop = new BobaLocation();
         // These get methods take a column number to get the value
         // 1 = column 1, etc..
-        a.setId(rs.getInt(1));
-        a.setName(rs.getString(2));
-        a.setLocation(rs.getString(3));
+        bobaShop.setId(rs.getInt(1));
+        bobaShop.setName(rs.getString(2));
+        bobaShop.setLocation(rs.getString(3));
 
-        BobaLocations.add(a);
+        BobaLocations.add(bobaShop);
       }
     }
     catch(Exception e){
@@ -104,22 +104,22 @@ public class BobaLocationDAO {
   public BobaLocation getBobaLocation(int id){
 
     String sql = "SELECT * FROM bobalocations WHERE id=" + id;
-    BobaLocation a = new BobaLocation();
+    BobaLocation bobaShop = new BobaLocation();
 
     try{
       Statement st = con.createStatement();
       ResultSet rs = st.executeQuery(sql);
       if(rs.next()){
-        a.setId(rs.getInt(1));
-        a.setName(rs.getString(2));
-        a.setLocation(rs.getString(3));
+        bobaShop.setId(rs.getInt(1));
+        bobaShop.setName(rs.getString(2));
+        bobaShop.setLocation(rs.getString(3));
       }
     }
     catch(Exception e){
       System.out.println(e);
     }
 
-    return a;
+    return bobaShop;
   }
 
   /* =========================================================================
@@ -128,7 +128,7 @@ public class BobaLocationDAO {
   * Using a PreparedStatement because it will replace the question marks by
   * using the BobaLocation object I passed in to fill those values
   ========================================================================= */
-  public void createBobaLocation(BobaLocation a){
+  public void createBobaLocation(BobaLocation bobaShop){
 
     // Instead of doing this below, utilize a PreparedStatement from java.sql
     // You can use ? as a placeholder !!!
@@ -142,9 +142,9 @@ public class BobaLocationDAO {
       PreparedStatement st = con.prepareStatement(sql);
       // Replacing the ? now in the sql string
       // 1 = 1st question mark, 2 = 2nd question mark , etc.
-      st.setInt(1, a.getId());
-      st.setString(2,a.getName());
-      st.setString(3,a.getLocation());
+      st.setInt(1,bobaShop.getId());
+      st.setString(2,bobaShop.getName());
+      st.setString(3,bobaShop.getLocation());
       st.executeUpdate();
     }
     catch(Exception e){
@@ -158,17 +158,17 @@ public class BobaLocationDAO {
   * Task: Updates an BobaLocation's information in the DB
   * Take note that the Execute function is now executeUpdate()
   ========================================================================= */
-  public void updateBobaLocation(BobaLocation a){
+  public void updateBobaLocation(BobaLocation bobaShop){
 
-    String sql = "UPDATE bobalocations SET name=?, Locations=? WHERE id=?";
+    String sql = "UPDATE bobalocations SET name=?, location=? WHERE id=?";
 
     try{
       // The PreparedStatement takes the sql query right away vs a Statement obj
       PreparedStatement st = con.prepareStatement(sql);
       // Replacing the ? now in the sql string
-      st.setString(1,a.getName());
-      st.setString(2,a.getLocation());
-      st.setInt(3,a.getId());
+      st.setString(1,bobaShop.getName());
+      st.setString(2,bobaShop.getLocation());
+      st.setInt(3,bobaShop.getId());
       st.executeUpdate();
     }
     catch(Exception e){

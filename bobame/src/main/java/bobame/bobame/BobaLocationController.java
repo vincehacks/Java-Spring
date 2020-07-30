@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 // Note: Jackson is brought in as a Maven dependency and this does the
 // conversion of list of objects into JSON
+
 @RestController
 public class BobaLocationController {
 
@@ -34,31 +35,31 @@ public class BobaLocationController {
 
   // Adds an BobaLocation to the DB
   @PostMapping("BobaLocation")
-  public BobaLocation createBobaLocation(@RequestBody BobaLocation a1){
-    repo.createBobaLocation(a1);
-    return a1;
+  public BobaLocation createBobaLocation(@RequestBody BobaLocation bobaShop){
+    repo.createBobaLocation(bobaShop);
+    return bobaShop;
   }
 
   // Updates an BobaLocation in the DB, creates a new BobaLocation of id does not exist!
   @PutMapping("BobaLocation")
-  public BobaLocation updateBobaLocation(@RequestBody BobaLocation a1){
-    if(repo.getBobaLocation(a1.getId()).getId() == 0)
-      repo.createBobaLocation(a1);
+  public BobaLocation updateBobaLocation(@RequestBody BobaLocation bobaShop){
+    if(repo.getBobaLocation(bobaShop.getId()).getId() == 0)
+      repo.createBobaLocation(bobaShop);
     else
-      repo.updateBobaLocation(a1);
+      repo.updateBobaLocation(bobaShop);
 
-    return a1;
+    return bobaShop;
   }
 
   // Deletes an BobaLocation from the DB, if it's in the DB
   @DeleteMapping("BobaLocation/{id}")
   public BobaLocation deleteBobaLocation(@PathVariable("id") int id){
 
-    BobaLocation a = repo.getBobaLocation(id);
+    BobaLocation bobaShop = repo.getBobaLocation(id);
 
-    if(a.getId() > -1)
+    if(bobaShop.getId() > -1)
       repo.deleteBobaLocation(id);
 
-    return a;
+    return bobaShop;
   }
 }
