@@ -13,7 +13,6 @@ is by using Postman.
   project is linked to a MYSQL database.
   ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct1.png)
   ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct2.png)
-  ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct3.png)
 
 #### INTRODUCTION TO SPRING
 
