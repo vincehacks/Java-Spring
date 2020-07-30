@@ -11,12 +11,8 @@ is by using Postman.
 - Description: This is a RESTful API that has been built using Spring Boot. It
   uses Maven as a build and manage the project with Tomcat as its server. The
   project is linked to a MYSQL database.
-  ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct1.png)
-  ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct2.png)
   <p align="center">
   <img src="https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct1.png" />
-  </p>
-  <p align="center">
   <img src="https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct2.png" />
   </p>
 
