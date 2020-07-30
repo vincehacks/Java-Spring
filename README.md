@@ -2,9 +2,18 @@
 
 Created by Vince Chang </br>
 
-Used Java-Spring to experiment with RESTFUL calls on a phonebook application.
+Here I used Java Spring to implement RESTful APIs (JAXRS). In addition I have
+also used MYSQL database to store data. The best way to test out these projects
+is by using Postman.
 
-# DAY 1
+### BOBA ME
+
+- Description: This is a RESTful API that has been built using Spring Boot. It
+  uses Maven as a build and manage the project with Tomcat as its server. The
+  project is linked to a MYSQL database.
+  ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct1.png)
+  ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct2.png)
+  ![Final Product](https://github.com/vincehacks/Java-Spring/blob/master/bobame/img/FinalProduct3.png)
 
 #### INTRODUCTION TO SPRING
 
