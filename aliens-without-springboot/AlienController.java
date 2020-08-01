@@ -7,7 +7,9 @@ public class AlienController{
   AlienDAO repo = new AlienDao();
 
   // Retrieves ALL ALIENS from the DB
-  // @Produces is what is returned, this is by Jersey which uses Moxy for content negotiation
+  // @Produces is what is returned, this is by Jersey which uses Moxy for
+  // content negotiation. Because a list is returned, Moxy will resolve to a
+  // JSON or XML
   @GET
   @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
   public List<Alien> getAliens(){

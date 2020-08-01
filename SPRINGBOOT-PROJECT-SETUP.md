@@ -15,6 +15,14 @@ This will inform how to create a Spring Boot Web REST API with MySQL database.
 - Fill in package name and artifact id
 - Choose the latest Spring boot version
 - Search and select `Spring Web` not `Spring Reactive Web`
+- Automatically this is added to the `pom.xml`
+
+```xml
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
+```
 
 4. Choose appropriate location of where to set up project
 
