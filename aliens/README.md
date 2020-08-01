@@ -1,4 +1,4 @@
-# ALIEN REST API
+# ALIEN REST API USING SPRING BOOT
 
 Created by Vince Chang </br>
 
@@ -132,13 +132,4 @@ String url = "jdbc:mysql://localhost:3306/restdb?useUnicode=true&characterEncodi
 
 `mvn clean package`
 
-This will generate a `redfin-1.0-SNAPSHOT-jar-with-dependencies.jar`
-file under `redfin/target`
-
-2. Run the program by using the jar with this command
-
-NOTE: Need to be running this from the root (redfin), NOT inside /target
-
-`java -jar target/redfin-1.0-SNAPSHOT-jar-with-dependencies.jar`
-
-The output will be displayed to the terminal
+2. Use Spring Dashboard to run the project

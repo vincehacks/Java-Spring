@@ -11,10 +11,6 @@ public class AlienDAO{
 
   public AlienDAO(){
 
-    // This is for mysql
-    // String url = "jdbc:mysql://localhost:3306/";
-    // con = DriverManager.getConnection(url);
-
     listOfAliens = new ArrayList<>();
 
     Alien a1 =  new Alien();
@@ -29,10 +25,44 @@ public class AlienDAO{
 
     listOfAliens.add(a1);
     listOfAliens.add(a2);
+
+    // FOR MYSQL
+    // String url = "jdbc:mysql://localhost:3306/NAME_OF_MYSQL_DATABASE";
+
+    // // This is set up when the database is set up
+    // String username = "root";
+    // String password = "root";
+
+    // try{
+    //   // Load the driver
+    //   Class.forName("com".mysql.jdbc.Driver)
+    //   con = DriverManager.getConnection(url);
+    // } catch(Exception e){
+    //     System.out.println(e);
+    // }
+
   }
 
   public List<Alien> getAliens(){
     return listOfAliens;
+    // FOR MYSQL
+    // List<Alien> listOfAliens = new ArrayList<>();
+    // String sql = "SELECT * FROM alien";
+    // try{
+    //   Statement st = con.createStatement();
+    //   ResultSet rs = st.executeQuery(sql);
+    //   while(rs.next()){
+    //     Alien a = new Alien();
+    //     a.setId(rs.getInt(1));
+    //     a.setName(rs.getString(2));
+    //     a.setPoints(rs.getInt(3));
+    //     listOfAliens.add(a);
+    //   }
+
+    // } catch(Exception e){
+    //     System.out.println(e);
+    // }
+    // return listOfAliens;
   }
 
 
@@ -43,12 +73,43 @@ public class AlienDAO{
       }
     }
     return null;
+
+    // FOR MYSQL
+    // String sql = "SELECT * FROM alien WHERE id=" + id;
+    // Alien a = new Alien();
+    // try{
+    //   Statement st = con.createStatement();
+    //   ResultSet rs = st.executeQuery(sql);
+    //   if(rs.next()){
+    //     a.setId(rs.getInt(1));
+    //     a.setName(rs.getString(2));
+    //     a.setPoints(rs.getInt(3));
+    //   }
+
+    // } catch(Exception e){
+    //     System.out.println(e);
+    // }
+    // return a;
+
   }
 
 
   // This is a method that will work with a DB, but faking it here
   public void createAlien(Alien a){
     aliens.add(a1);
+
+    // FOR MYSQL
+    // String sql = "INSERT INTO alien VALUES (?,?,?)";
+    // try{
+    //   PreparedStatement st = con.prepareStatement();
+    //   st.setInt(1, a.getId());
+    //   st.setString(2, a.getName());
+    //   st.setInt(3, a.getPoints());
+    //   st.executeUpdate();
+
+    // } catch(Exception e){
+    //     System.out.println(e);
+    // }
   }
 
   // MySQL with a framework called JDBC
@@ -63,6 +124,19 @@ public class AlienDAO{
         alien.setPoints(a.getPoints());
       }
     }
+
+    // FOR MYSQL
+    // String sql = "UPDATE alien SET name=?, points=?, WHERE id=?";
+    // try{
+    //   PreparedStatement st = con.prepareStatement();
+    //   st.setString(1, a.getName());
+    //   st.setInt(2, a.getPoints());
+    //   st.setString(3, a.getId());
+    //   st.executeUpdate();
+
+    // } catch(Exception e){
+    //     System.out.println(e);
+    // }
   }
 
   public void deleteAlien(int id){
@@ -72,5 +146,15 @@ public class AlienDAO{
         break;
       }
     }
+    // FOR MYSQL
+    // String sql = "DELETE alien WHERE id=?";
+    // try{
+    //   PreparedStatement st = con.prepareStatement();
+    //   st.setInt(1, id);
+    //   st.executeUpdate();
+
+    // } catch(Exception e){
+    //     System.out.println(e);
+    // }
   }
 }
