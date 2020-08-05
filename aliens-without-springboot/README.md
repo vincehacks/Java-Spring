@@ -224,3 +224,36 @@ public class AlienDAO{
     }
   }
 ```
+
+### SENDING THE HEADER RESPONSE BACK
+
+- You can send the status of the response, using a **Response Builder**
+- With this, you can modify the status code and header information
+- Can set cookies, encoding etc. Just call the function
+
+```java
+
+Alien alien = new Alien();
+
+@POST
+public Response addAlien(Alien a, @Context UriInfo uriInfo){
+  Alien newAlien = alien.createAlien(a)
+
+  // This is the example of how to do a hardcoded way
+  //return Response.created(new URI("/aliens/alien/" + a.getAlien()));
+
+  // This is now using the URI to get the info
+  // The getAbsolutePathBuilder() will append the alien id to
+  // /aliens/alien + alien ID
+  URI uri = uriInfo.getAbsolutePathBuilder().path(a.getId());
+  return Response.created(uri);
+    .entity(newAlien)
+    .build();
+}
+```
+
+### ERROR HANDLING
+
+1. Create an `ExceptionMapper`, takes a Type of exception
+2. Implement the `toResponse` method to return a `Response`
+3. Send Response back, `ErrorMessage`, response codes, etc
