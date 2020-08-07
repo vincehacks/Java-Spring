@@ -108,8 +108,9 @@ C.R.U.D operations. This README will explain that.
 4. Create the Statement Object (Think about what to say)
    - **3 Types: Statement, PreparedStatement, CallableStatement**
    - **Statement**: usually used for GETs
-   - **PreparedStatement**: used when you need to create a query with values that
-     will be substituted with information that is passed in from a parameter
+   - **PreparedStatement**: used when you need to create a query with values
+     that will be substituted with information that is passed in from a
+     parameter
    - **CallableStatement**: used for stored procedures
 5. Execute the Query (Say it)
    - This will go out to the DB to do the query that was build in step 4

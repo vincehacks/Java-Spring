@@ -257,3 +257,11 @@ public Response addAlien(Alien a, @Context UriInfo uriInfo){
 1. Create an `ExceptionMapper`, takes a Type of exception
 2. Implement the `toResponse` method to return a `Response`
 3. Send Response back, `ErrorMessage`, response codes, etc
+
+#### IDEMPOTENCE
+
+**Idempotence**: is the property of certain operations in mathematics and
+computer science whereby they can be applied multiple times without changing the
+result beyond the initial application.
+YES: GET, PUT, DELETE (Don't need to make a hard query every time)
+NO: POST (Has to make a hard query (update every time))

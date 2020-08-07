@@ -564,9 +564,10 @@ is by using Postman.
 
 #### CONFIGURATION WITH web.xml
 
-```
+```xml
 <context-param>
-<param-name>contextConfigLocation</param-name> <param-value>/WEB-INF/application-config.xml</param-value>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/application-config.xml</param-value>
 </context-param>
 <servlet>
 <servlet-name>Spring</servlet-name> <servlet-class>
